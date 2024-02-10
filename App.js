@@ -2,40 +2,39 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image } from 'react-n
 import TextComponent from './components/TextComponent';
 
 const App = () => {
-  return[
+  return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <Text style={styles.title}>Mi Biografia</Text>
-        <Image source={require('./assets/images/esp.png')}/>
-        <TextComponent/>
+        <Text style={styles.title}>Mi Biografía</Text>
+        <Image source={require('./assets/images/esp.png')} style={styles.image} />
+        <TextComponent />
       </ScrollView>
     </SafeAreaView>
-  ]
-}
-//
+  );
+};
+
 const styles = StyleSheet.create({
-    container: {
-      height: '100%',
-      width: '100%',dth: '100%',
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#487eb0'
-    },
-    title:{
-      fontSize: 20,
-      fontWeight: 'bold',
-      color: '#dfe6e9'
-    },
-    image: {
-      width: 100,
-      height: 100
-    },
-    text:{
-      fontSize: 14,
-      fontWeight: 'normal',
-      color: '#dfe6e9'
-    }
-  })
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#487eb0',
+    padding: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#dfe6e9',
+    marginBottom: 16,
+  },
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    borderWidth: 2,
+    borderColor: '#dfe6e9',
+    marginBottom: 16,
+  },
+});
 
 export default App;
